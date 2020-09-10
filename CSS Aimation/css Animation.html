@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<div class="banner">
+		<div id="drone">
+			<img src="img/drone.png" class="drone-pic">
+			<img src="img/drone-right.png" class="drone-right">
+			<img src="img/drone-left.png" class="drone-left">
+		</div>
+
+	</div>
+<script type="text/javascript">
+	$(".banner").mousemove(function(e){
+		var mousex=(e.pageX*-1/2)+300;
+		var mousey=(e.pageY*-1/2)+120;
+		$("#drone").css(
+			{
+				'transform': 'translate3d('+mousex+'px,'+mousey+'px,0)'
+			}
+			);
+	});
+</script>
+
+</body>
+</html>

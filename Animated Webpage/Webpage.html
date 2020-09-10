@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Webpage</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="main">
+		<div class="navbar">
+			<nav>
+				<div class="logo">
+					<img src="images/logo.png">
+				</div>
+				<div class="nav-link">
+					<ul>
+						<li class="active">
+							<a href="" >Home</a>
+						</li>
+						<li>
+							<a href="">Service</a>
+						</li>
+						<li>
+							<a href="">Work</a>
+						</li>
+						<li>
+							<a href="">About us</a>
+						</li>
+					</ul>
+					
+				</div>
+				<div class="menu">
+					<img src="images/menu.png">
+				</div>
+			</nav>
+		</div>
+		<div class="content">
+			<div class="social-icon">
+			<img src="images/facebook.png">
+			<img src="images/instagram.png">
+			<img src="images/twitter.png">
+			<img src="images/youtube.png">
+		</div>
+		<div class="search">
+			<input type="text" placeholder="search">
+			<img src="images/search.png">
+		</div>
+	</div>
+		<img src="images/cloud.png" id="cloud">
+		<img src="images/plane.png" id="airplain">
+
+		<div id="hotAirBalloon">
+			<img src="images/balloon.png"  	class="balloon1">
+			<img src="images/balloon.png" class="balloon2">
+			<img src="images/balloon.png" class="balloon3">
+	</div>
+	<img src="images/pause.png" id="play">
+	</div>
+	<script type="text/javascript">
+		var btn=document.getElementById("play");
+		btn.onclick= function(){
+			if(cloud.style.webkitAnimationPlayState =="paused")
+			{
+				cloud.style.webkitAnimationPlayState ="running";
+				airplain.style.webkitAnimationPlayState ="running";
+				hotAirBalloon.style.webkitAnimationPlayState ="running";
+				btn.src = "images/pause.png";
+			}
+			else{
+				cloud.style.webkitAnimationPlayState ="paused";
+				airplain.style.webkitAnimationPlayState  ="paused";
+				hotAirBalloon.style.webkitAnimationPlayState="paused";	
+					btn.src ="images/play.png";	
+			}
+		}
+	</script>
+</body>
+</html>
